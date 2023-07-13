@@ -11,6 +11,10 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 -->
 
+# Online **<span style="color: red;">Movie</span>** Ticket **<span style="color: blue;">Booking</span>** Platform
+# <span style="color:red">Your Heading</span>
+
+
 ### About this repository
 Contains design diagrams and source code information on Case Study : Online Movie Booking
 
