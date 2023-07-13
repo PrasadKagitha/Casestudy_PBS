@@ -26,14 +26,14 @@ Contains design diagrams and source code information on Case Study : Online Movi
 
 Frameworks and libraries used to develop this project
 
-* [![Built with Java][Java-img]][Java-url]
-* [![Built with Spring MVC][Spring-img]][Spring-url]
-* [![Built with Spring Boot](https://img.shields.io/badge/Built%20with-Spring%20Boot-green.svg)](https://spring.io/projects/spring-boot)
-* [![Built with Spring Security][Spring-sec-img]][Spring-sec-url]
-* [![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-yellow.svg)](https://www.javascript.com/)
-* [![Built with Mariadb][Mariadb-img]][Mariadb-url]
-* [![Built with Redis][Redis-img]][Redis-url]
-* [![Built with Circleci][Circleci-img]][Circleci-url]
+* [![Java][Java-img]][Java-url]
+* [![Spring MVC][Spring-img]][Spring-url]
+* [![Spring Boot](https://img.shields.io/badge/Built%20with-Spring%20Boot-green.svg)](https://spring.io/projects/spring-boot)
+* [![Spring Security][Spring-sec-img]][Spring-sec-url]
+* [![JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-yellow.svg)](https://www.javascript.com/)
+* [![Mariadb][Mariadb-img]][Mariadb-url]
+* [![Redis][Redis-img]][Redis-url]
+* [![Circleci][Circleci-img]][Circleci-url]
 
 [Java-img]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
 [Java-url]: https://www.java.com/en/
