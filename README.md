@@ -28,9 +28,9 @@ Frameworks and libraries used to develop this project
 
 * [![Java][Java-img]][Java-url]
 * [![Spring MVC][Spring-img]][Spring-url]
-* [![Spring Boot](https://img.shields.io/badge/Built%20with-Spring%20Boot-green.svg)](https://spring.io/projects/spring-boot)
+* [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-green.svg)](https://spring.io/projects/spring-boot)
 * [![Spring Security][Spring-sec-img]][Spring-sec-url]
-* [![JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-yellow.svg)](https://www.javascript.com/)
+* [![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)](https://www.javascript.com/)
 * [![Mariadb][Mariadb-img]][Mariadb-url]
 * [![Redis][Redis-img]][Redis-url]
 * [![Circleci][Circleci-img]][Circleci-url]
