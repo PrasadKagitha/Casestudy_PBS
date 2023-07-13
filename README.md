@@ -14,7 +14,7 @@
 ### About this repository
 Contains design diagrams and source code information on Case Study : Online Movie Booking
 
-### Main functionalities
+### Core functionalities that are covered
   1. Search Theaters By Users
   2. Search Offers and Discounts By Users
   3. Book Seats By Users
@@ -28,9 +28,9 @@ Frameworks and libraries used to develop this project
 
 * [![Java][Java-img]][Java-url]
 * [![Spring MVC][Spring-img]][Spring-url]
-* [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-green.svg)](https://spring.io/projects/spring-boot)
+* [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-343434?style=for-the-badge&logo=Spring%20Boot)](https://spring.io/projects/spring-boot)
 * [![Spring Security][Spring-sec-img]][Spring-sec-url]
-* [![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)](https://www.javascript.com/)
+* [![JavaScript](https://img.shields.io/badge/JavaScript-8A2BE2?style=for-the-badge&logo=JavaScript)](https://www.javascript.com/)
 * [![Mariadb][Mariadb-img]][Mariadb-url]
 * [![Redis][Redis-img]][Redis-url]
 * [![Circleci][Circleci-img]][Circleci-url]
