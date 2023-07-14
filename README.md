@@ -29,7 +29,7 @@ The development strategy steps
   4. Refactor Code
   5. Repeat the cycle
 ```diff
-- due to time constraint and it is for case study purpose only, focusing on
+- due to time constraint and as it is on the purpose of case study, covering below on development methodology process
 @@ 1. Defining Behaviors and Scenarios @@
 ```
 
