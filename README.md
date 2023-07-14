@@ -37,7 +37,13 @@ The development strategy steps
 ![HLA](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/69e4d580-1a3a-47d2-843d-883bbf45ac82)
 
 
-### Core functionalities that are covered
+### Key Scenarios
+### Scenario-1 : Browse Movies
+  Given I am on Movie ticket booking platform  
+  When I select movie from the list  
+  And I select a date  
+  Then I should see list of theaters running the movie with showtime  
+  
   1. Search Theaters By Users
   2. Search Offers and Discounts By Users
   3. Book Seats By Users
