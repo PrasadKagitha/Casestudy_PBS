@@ -15,8 +15,27 @@
 
 # $${\color{lightblue}Case \space Study \space Purpose \space Only}$$
 
-### About this repository
+## About this repository
 Contains design diagrams and source code information on Case Study : Online Movie Booking
+
+### Software Development Methodology followed for this
+BDD : Behavioral Driven Development  
+TDD : Test Driven Development  
+Every development methodologies has their own advantages and can be used to together based on requirements.  
+The development strategy steps
+  1. Define Behaviors and Scenarios
+  2. Write Acceptance Tests
+  3. Implement Tests First
+  4. Refactor Code
+  5. Repeat the cycle
+```diff
+- due to time constraint and it is for case study purpose only, focusing on
+@@ 1. Defining Behaviors and Scenarios @@
+```
+
+### High level architecture of platform
+![HLA](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/69e4d580-1a3a-47d2-843d-883bbf45ac82)
+
 
 ### Core functionalities that are covered
   1. Search Theaters By Users
