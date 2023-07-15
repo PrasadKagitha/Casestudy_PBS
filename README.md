@@ -36,44 +36,28 @@ The development strategy steps
 ### High level architecture of platform
 ![HLA](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/69e4d580-1a3a-47d2-843d-883bbf45ac82)
 
+### ER Diagram
+![ER_Diagram](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/d658919e-5f9e-4f2d-82b3-4ce27db80621)
 
 ### Key Scenarios
 ### Scenario-1 : Browse Movies
-  Given I am on Movie ticket booking platform  
-  When I select movie from the list  
-  And I select a date  
-  Then I should see list of theaters running the movie with showtime  
-  
-  1. Search Theaters By Users
-  2. Search Offers and Discounts By Users
-  3. Book Seats By Users
-  4. Cancel booking by Users
-  5. Movie Show Info CRUD operations by Partners
-  6. Seat inventory and updation of show by Partners
+&nbsp;&nbsp;Given I am on Movie ticket booking platform  
+&nbsp;&nbsp;When I select movie from the list  
+&nbsp;&nbsp;And I select a date  
+&nbsp;&nbsp;Then I should see list of theaters running the movie with showtime  
+
+#### &nbsp;&nbsp;Scenario-1 : Design Diagram
+
 
 ### Built With
 
 Frameworks and libraries used to develop this project
 
-* [![Java][Java-img]][Java-url]
-* [![Spring MVC][Spring-img]][Spring-url]
-* [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-343434?style=for-the-badge&logo=Spring%20Boot)](https://spring.io/projects/spring-boot)
-* [![Spring Security][Spring-sec-img]][Spring-sec-url]
-* [![JavaScript](https://img.shields.io/badge/JavaScript-8A2BE2?style=for-the-badge&logo=JavaScript)](https://www.javascript.com/)
-* [![Mariadb][Mariadb-img]][Mariadb-url]
-* [![Redis][Redis-img]][Redis-url]
-* [![Circleci][Circleci-img]][Circleci-url]
-
-[Java-img]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
-[Java-url]: https://www.java.com/en/
-[Spring-img]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
-[Spring-url]: https://spring.io/projects/spring-framework/
-[Spring-sec-img]: https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white
-[Spring-sec-url]: https://spring.io/projects/spring-security
-[Mariadb-img]: https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
-[Mariadb-url]: https://mariadb.org/
-[Redis-img]: https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white
-[Redis-url]: https://redis.io/
-[Circleci-img]: https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white
-[Circleci-url]: https://circleci.com/
-
+![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=white)
+![Spring Framework](https://img.shields.io/badge/Spring_Framework-6DB33F?logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=spring&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
+![CDC](https://img.shields.io/badge/CDC-2b1d54)
+![CircleCI](https://img.shields.io/badge/CircleCI-343434?logo=circleci&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
