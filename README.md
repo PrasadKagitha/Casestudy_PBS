@@ -85,7 +85,7 @@ Frameworks and libraries used to develop this project
 &nbsp;&nbsp;Response  
 &nbsp;&nbsp;List of Theater and ShowTime Information  
 
-### ==============================================  
+#### ==============================================  
 ### Scenario-2 : Ticket Booking : Seat Reservation  
 &nbsp;&nbsp;Given I am on Movie ticket booking platform    
 &nbsp;&nbsp;When I select a seat from available seats  
@@ -117,4 +117,61 @@ Frameworks and libraries used to develop this project
 &nbsp;&nbsp;&nbsp;&nbsp;"msg":"booking successfull"  
 &nbsp;&nbsp;}  
 
+#### ==============================================  
+### Scenario-3 : Ticket Booking : Conflict of Seat Reservation By Multiple Users At Same Time  
+&nbsp;&nbsp;Given A Movie ticket booking platform    
+&nbsp;&nbsp;When Multiple Users select a same seat from available seats  
+&nbsp;&nbsp;And confirm the selection  
+&nbsp;&nbsp;Then seat should be reserved for only one user  
+
+#### &nbsp;&nbsp;Scenario-2 : Design Diagram  
+&nbsp;&nbsp;![LLD_BookingSeat](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/20884635-8237-4437-9cd1-6ca8960ea7e2)
+
+#### &nbsp;&nbsp;Scenario-2 : Explaination  
+#### &nbsp;&nbsp;Scenario-2 : Option-1  
+&nbsp;&nbsp; Use optimistic locking on Seat table by adding a version column  
+&nbsp;&nbsp; Before updating the BookingDetail, Fetch the version value of seat from DB  
+&nbsp;nbsp; Get the version number provided by user in request  
+&nbsp;&nbsp; Compare the both versions if match then increment the seat version value and then update bookingdetail for user.  
+
+#### &nbsp;&nbsp;Scenario-2 : Option-1  -- Drawbacks
+&nbsp;&nbsp; Optimistic locking avoids conflicts of same seat booking but not the best  
+&nbsp;&nbsp; Multiple times version number checking  
+&nbsp;&nbsp; Race Conditions on seat incrementation  
+&nbsp;&nbsp; Still needs serialisation process on increment the seat version  
+&nbsp;&nbsp; Can not guaranteed conflict resolution on many concurrent requests and distributed environments  
+
+#### &nbsp;&nbsp;Scenario-2 : Option-2  
+&nbsp;&nbsp; Use Distributed Locks such as zookeeper coordination service  
+&nbsp;&nbsp; Updation of bookingdetail with seat and user can write under distributed lock  
+&nbsp;nbsp; This ensures no conflicts of booking same seat   
+
+#### &nbsp;&nbsp;Scenario-2 : Option-2  -- Drawbacks
+&nbsp;&nbsp; Introducing a new resource to use a distributed locks   
+
+#### &nbsp;&nbsp;Scenario-2 : Option-3  
+&nbsp;&nbsp; Use redis watches - multi - exec block  
+&nbsp;&nbsp; Redis multi exec works exactly like optimistic locking and best for heavy loads as well  
+&nbsp;&nbsp; This ensures no conflicts of booking same seat   
+
+#### &nbsp;&nbsp;Scenario-2 : Option-3  -- Drawbacks
+&nbsp;&nbsp; If Redis is already been used in application , no problem  
+&nbsp;&nbsp; Else Introducing a new resource and relying on another resource     
+
+#### &nbsp;&nbsp;Scenario-2 : API  
+&nbsp;&nbsp;http://localhost:8080/otbms/bookings/reserveseat  
+&nbsp;&nbsp;Payload:  
+&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;"theater_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"screen_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"movie_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"user_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"show_time_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"seats": [{'seat_id': 'A1'}, {'seat_id': 'A2'}]  
+&nbsp;&nbsp;}  
+&nbsp;&nbsp;Response:  
+&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;"code": "200",  
+&nbsp;&nbsp;&nbsp;&nbsp;"msg":"booking successfull"  
+&nbsp;&nbsp;}  
 
