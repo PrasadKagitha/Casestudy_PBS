@@ -131,7 +131,7 @@ Frameworks and libraries used to develop this project
 #### &nbsp;&nbsp;Scenario-2 : Option-1  
 &nbsp;&nbsp; Use optimistic locking on Seat table by adding a version column  
 &nbsp;&nbsp; Before updating the BookingDetail, Fetch the version value of seat from DB  
-&nbsp;nbsp; Get the version number provided by user in request  
+&nbsp;&nbsp; Get the version number provided by user in request  
 &nbsp;&nbsp; Compare the both versions if match then increment the seat version value and then update bookingdetail for user.  
 
 #### &nbsp;&nbsp;Scenario-2 : Option-1  -- Drawbacks
@@ -144,7 +144,7 @@ Frameworks and libraries used to develop this project
 #### &nbsp;&nbsp;Scenario-2 : Option-2  
 &nbsp;&nbsp; Use Distributed Locks such as zookeeper coordination service  
 &nbsp;&nbsp; Updation of bookingdetail with seat and user can write under distributed lock  
-&nbsp;nbsp; This ensures no conflicts of booking same seat   
+&nbsp;&nbsp; This ensures no conflicts of booking same seat   
 
 #### &nbsp;&nbsp;Scenario-2 : Option-2  -- Drawbacks
 &nbsp;&nbsp; Introducing a new resource to use a distributed locks   
@@ -174,4 +174,9 @@ Frameworks and libraries used to develop this project
 &nbsp;&nbsp;&nbsp;&nbsp;"code": "200",  
 &nbsp;&nbsp;&nbsp;&nbsp;"msg":"booking successfull"  
 &nbsp;&nbsp;}  
+
+## $${\color{red}Limitations \space Of \space this \space CaseStudy}$$
+## Due to time constraints 
+###  Could not cover design diagrams for security / authentication
+###  Microservices component communication with one another and microservices patterns
 
