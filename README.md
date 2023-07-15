@@ -58,7 +58,18 @@ Frameworks and libraries used to develop this project
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 ![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apache-kafka&logoColor=white)
 
-
+### Microservices might be needed for application
+  1. User Service
+  2. Partner Service
+  3. Theater Service
+  4. Movie Service
+  5. ShowTime Service
+  6. Booking Service
+  7. Location Service
+  8. Notification Service
+  9. Reporting/Analytics Service
+  10. Payment Service
+      
 ### Key Scenarios
 ### Scenario-1 : Browse Movies
 &nbsp;&nbsp;Given I am on Movie ticket booking platform  
