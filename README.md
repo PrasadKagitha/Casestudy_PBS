@@ -33,6 +33,11 @@ The development strategy steps
 @@ 1. Defining Behaviors and Scenarios @@
 ```
 
+### Architectural Patterns Can Be Used
+![Microservices_Architecture](https://img.shields.io/badge/Microservices_Architecture-c3e7ce?logoColor=white&style=for-the-badge)  
+![Event_Driven_Architecture](https://img.shields.io/badge/Event_Driven_Architecture-c3e7ce?logoColor=white&style=for-the-badge)  
+![Pipes_And_Filters_Architecture](https://img.shields.io/badge/Pipes_And_Filters_Architecture-c3e7ce?logoColor=white&style=for-the-badge)  
+
 ### High level architecture of platform
 ![HLA](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/69e4d580-1a3a-47d2-843d-883bbf45ac82)
 
@@ -88,10 +93,28 @@ Frameworks and libraries used to develop this project
 &nbsp;&nbsp;Then seat should be reserved for the user 
 
 #### &nbsp;&nbsp;Scenario-2 : Design Diagram  
-&nbsp;&nbsp;![LLD_BookingSeat](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/a42de105-c010-4c59-a379-36bae035370c)
-
+&nbsp;&nbsp;![LLD_BookingSeat](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/20884635-8237-4437-9cd1-6ca8960ea7e2)
 
 #### &nbsp;&nbsp;Scenario-2 : Explaination  
+&nbsp;&nbsp; BookingDetailService takes responsibility of handling seat reservation for users. as load will be huge, bookingdetailservice is scalable in terms of design.  
+&nbsp;&nbsp; Before seat booking to update to database, we verify seat availability one more time for confirmation purpose.  
+&nbsp;&nbsp; Once seat is updated to database , it is locked and not available for other users.  
 
 #### &nbsp;&nbsp;Scenario-2 : API  
+&nbsp;&nbsp;http://localhost:8080/otbms/bookings/reserveseat  
+&nbsp;&nbsp;Payload:  
+&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;"theater_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"screen_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"movie_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"user_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"show_time_id":"",  
+&nbsp;&nbsp;&nbsp;&nbsp;"seats": [{'seat_id': 'A1'}, {'seat_id': 'A2'}]  
+&nbsp;&nbsp;}  
+&nbsp;&nbsp;Response:  
+&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;"code": "200",  
+&nbsp;&nbsp;&nbsp;&nbsp;"msg":"booking successfull"  
+&nbsp;&nbsp;}  
+
 
