@@ -39,16 +39,6 @@ The development strategy steps
 ### ER Diagram
 ![ER_Diagram](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/d658919e-5f9e-4f2d-82b3-4ce27db80621)
 
-### Key Scenarios
-### Scenario-1 : Browse Movies
-&nbsp;&nbsp;Given I am on Movie ticket booking platform  
-&nbsp;&nbsp;When I select movie from the list  
-&nbsp;&nbsp;And I select a date  
-&nbsp;&nbsp;Then I should see list of theaters running the movie with showtime  
-
-#### &nbsp;&nbsp;Scenario-1 : Design Diagram
-
-
 ### Built With
 
 Frameworks and libraries used to develop this project
@@ -61,3 +51,30 @@ Frameworks and libraries used to develop this project
 ![CDC](https://img.shields.io/badge/CDC-2b1d54)
 ![CircleCI](https://img.shields.io/badge/CircleCI-343434?logo=circleci&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+
+### Key Scenarios
+### Scenario-1 : Browse Movies
+&nbsp;&nbsp;Given I am on Movie ticket booking platform  
+&nbsp;&nbsp;When I select movie from the list  
+&nbsp;&nbsp;And I select a date  
+&nbsp;&nbsp;Then I should see list of theaters running the movie with showtime  
+
+#### &nbsp;&nbsp;Scenario-1 : Design Diagram  
+
+#### &nbsp;&nbsp;Scenario-1 : Explaination  
+
+#### &nbsp;&nbsp;Scenario-1 : API  
+
+### ==============================================  
+### Scenario-2 : Ticket Booking : Seat Reservation  
+&nbsp;&nbsp;Given I am on Movie ticket booking platform    
+&nbsp;&nbsp;When I select a seat from available seats  
+&nbsp;&nbsp;And I confirm the selection and proceed to payment  
+&nbsp;&nbsp;Then Seat should be blocked for the user and should be booked by others  
+
+#### &nbsp;&nbsp;Scenario-1 : Design Diagram  
+
+#### &nbsp;&nbsp;Scenario-1 : Explaination  
+
+#### &nbsp;&nbsp;Scenario-1 : API  
+
