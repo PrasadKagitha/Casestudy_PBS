@@ -49,8 +49,10 @@ Frameworks and libraries used to develop this project
 ![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
 ![CDC](https://img.shields.io/badge/CDC-2b1d54)
-![CircleCI](https://img.shields.io/badge/CircleCI-343434?logo=circleci&logoColor=white)
+![CircleCI](https://img.shields.io/badge/CircleCI-76dcde?logo=circleci&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apache-kafka&logoColor=white)
+
 
 ### Key Scenarios
 ### Scenario-1 : Browse Movies
@@ -60,21 +62,36 @@ Frameworks and libraries used to develop this project
 &nbsp;&nbsp;Then I should see list of theaters running the movie with showtime  
 
 #### &nbsp;&nbsp;Scenario-1 : Design Diagram  
+&nbsp;&nbsp;![LLD_Search](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/b83f005a-454c-4a5f-8155-84f0e31378ff)
 
 #### &nbsp;&nbsp;Scenario-1 : Explaination  
+&nbsp;&nbsp; An online booking system can have million number of users in real time across country and even hundreds of thousands in location wise,  
+&nbsp;&nbsp;and theaters and show information of movies are common for every user based on the location and date.  
+&nbsp;&nbsp;Hence, instead of querying the database for every time it is better to have a cache in place (it can be any like Materialized View, how we think on design).  
+&nbsp;&nbsp;But, we should have some cache invalidation functionality as well to update the cache in real time.  
 
 #### &nbsp;&nbsp;Scenario-1 : API  
+&nbsp;&nbsp;http://localhost:8080/otbms/theater/search  
+&nbsp;&nbsp;Payload  
+&nbsp;&nbsp;{  
+&nbsp;&nbsp;"movie_id": 122,  
+&nbsp;&nbsp;"date" : "2023-01-21"  
+&nbsp;&nbsp;}  
+&nbsp;&nbsp;Response  
+&nbsp;&nbsp;List of Theater and ShowTime Information  
 
 ### ==============================================  
 ### Scenario-2 : Ticket Booking : Seat Reservation  
 &nbsp;&nbsp;Given I am on Movie ticket booking platform    
 &nbsp;&nbsp;When I select a seat from available seats  
-&nbsp;&nbsp;And I confirm the selection and proceed to payment  
-&nbsp;&nbsp;Then Seat should be blocked for the user and should be booked by others  
+&nbsp;&nbsp;And I confirm the selection  
+&nbsp;&nbsp;Then seat should be reserved for the user 
 
-#### &nbsp;&nbsp;Scenario-1 : Design Diagram  
+#### &nbsp;&nbsp;Scenario-2 : Design Diagram  
+&nbsp;&nbsp;![LLD_BookingSeat](https://github.com/PrasadKagitha/Casestudy_PBS/assets/13848297/a42de105-c010-4c59-a379-36bae035370c)
 
-#### &nbsp;&nbsp;Scenario-1 : Explaination  
 
-#### &nbsp;&nbsp;Scenario-1 : API  
+#### &nbsp;&nbsp;Scenario-2 : Explaination  
+
+#### &nbsp;&nbsp;Scenario-2 : API  
 
